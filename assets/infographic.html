@@ -1,0 +1,38 @@
+<!doctype html><html lang="th"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}
+body{width:1080px;height:1350px;background:radial-gradient(circle at 80% 0%,#1d2b5c 0,#0b0f1e 55%);color:#e8ecf8;font-family:'Noto Sans Thai','Sarabun','Noto Sans',sans-serif;padding:50px 72px 44px;display:flex;flex-direction:column;gap:22px;overflow:hidden}
+.tag{color:#7dd3fc;font-size:26px;letter-spacing:3px;font-weight:600}
+h1{font-size:72px;line-height:1.2;font-weight:800;background:linear-gradient(90deg,#fff,#7dd3fc 60%,#a78bfa);-webkit-background-clip:text;color:transparent;padding-bottom:6px}
+.sub{font-size:30px;color:#9aa6c8}
+.card{background:#121835;border:1px solid #28336a;border-radius:24px;padding:24px 36px}
+.card h2{font-size:30px;color:#a78bfa;margin-bottom:16px}
+pre{font-family:'DejaVu Sans Mono','Noto Sans Mono',monospace;font-size:25px;line-height:1.45;color:#d6defa}
+pre b{color:#7dd3fc}pre i{color:#6b7599;font-style:normal}
+.row{margin:14px 0}.lab{font-size:27px;color:#c6cee8;margin-bottom:8px;display:flex;justify-content:space-between}
+.lab span{font-weight:700;color:#fff}
+.bar{height:32px;border-radius:19px;background:#1b2250;overflow:hidden}
+.bar div{height:100%;border-radius:19px}
+.old{background:#f87171}.new{background:linear-gradient(90deg,#34d399,#7dd3fc)}
+.pill{display:inline-block;background:#064e3b;color:#6ee7b7;border-radius:30px;padding:6px 20px;font-size:26px;font-weight:700}
+.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:27px;color:#9aa6c8}
+.foot b{color:#7dd3fc;font-size:30px}
+</style></head><body>
+<div class="tag">CLAUDE CODE SKILL</div>
+<h1>คุยกับ AI Agent<br>ให้ประหยัด Token</h1>
+<div class="sub">สั่งงาน worker ด้วย contract สั้น และ follow-up เฉพาะส่วนที่เปลี่ยน</div>
+<div class="card"><h2>Contract template</h2>
+<pre><b>GOAL:</b>    one-line outcome
+<b>CTX:</b>     facts worker can't discover
+<b>DO:</b>      only where it'd go wrong  <i>(optional)</i>
+<b>RULES:</b>   hard constraints = scope fence
+<b>DONE:</b>    verify cmd → expected result
+<b>STOP-IF:</b> condition → report, don't guess
+<b>REPLY:</b>   ≤N lines, fixed fields</pre></div>
+<div class="card"><h2>ก่อน → หลัง (จำนวนคำ)</h2>
+<div class="row"><div class="lab">Follow-up (SendMessage) <span>~100 → ~30 คำ</span></div>
+<div class="bar"><div class="old" style="width:100%"></div></div><div class="bar" style="margin-top:8px"><div class="new" style="width:30%"></div></div></div>
+<div class="row" style="margin-top:26px"><div class="lab">Investigation brief (read-only) <span>~170 → ~95 คำ</span></div>
+<div class="bar"><div class="old" style="width:100%"></div></div><div class="bar" style="margin-top:8px"><div class="new" style="width:56%"></div></div></div>
+<div style="margin-top:22px;font-size:23px;color:#8b95b8">เบื้องต้น ตัวอย่างน้อย (preliminary, small sample) · แดง = เก่า เขียว = ใหม่</div></div>
+<div class="foot"><span class="pill">MIT License</span><b>github.com/thaigqsoft/terse-agent-comms</b></div>
+</body></html>
